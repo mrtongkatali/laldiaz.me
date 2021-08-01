@@ -13,8 +13,13 @@ const _renderCover = () => {
         <div className="col-md-7 section-content-wrapper hero">
           <div className="section-content">
             <p>Hi, I'm a Software Engineer based in Manila, PH.</p>
-            <p>I love designing and building RESTful APIs, Single page applications (and ocassionally hybrid apps) and everything in between using mainly Python and Vue.</p>
-            <p>Currently, I spend most of my time working as a full-time Javascript Developer at <a href="https://www.gocre8it.com/" target="_blank">GoCre8it</a>. I'm actively shipping features for our marketplace platform and I solve bunch of interesting problems on a daily basis. </p>
+            <p>I work mostly on major Javascript frameworks such as Vue, React and some NodeJS.</p>
+            <p>I have good niche on backend development using Python, MySQL, Elasticsearch and AWS as well.</p>
+            {/* <p>I love designing and building RESTful APIs, Single page applications (and ocassionally hybrid apps) and everything in between using mainly Python and Vue.</p> */}
+
+            <p>Currently, 
+              I spend most of my time working as a full-time <span className="strike">Javascript Developer</span> <strong>Software Engineer</strong> at <a className="strike" href="https://www.gocre8it.com/" target="_blank">GoCre8it</a> <a>Experience Digital</a>. I'm actively shipping features for <span className="strike">our marketplace platform</span> and I solve bunch of interesting problems on a daily basis. 
+            </p>
             <p>Feel free to take a look at my most recent projects on <br/>"<a href="">Things I'm building</a>" section. You can also stop and say hello at my email below.</p>
             
             <ul className="soc-media mt-5 mx-auto">
