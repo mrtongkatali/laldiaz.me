@@ -206,6 +206,8 @@ const Experience = (props) => {
 };
 
 const Portfolio = (props) => {
+  const { fadeInSection } = props;
+
   return (
     <>
       <div className="section-bg-opacity"></div>
@@ -216,7 +218,11 @@ const Portfolio = (props) => {
         </div>
         <div className="col-md-7 section-content-wrapper">
           <div className="section-content">
-            <p>Due to this three-letter-word <strong>"N.D.A"</strong>. Most of my commits are private. But if you're keen to know on how I code things, feel free to checkout this repository.</p>
+            {fadeInSection && (
+              <Typing speed={7}>
+                <p>Due to this three-letter-word <strong>"N.D.A"</strong>. Most of my commits are private. But if you're keen to know on how I code things, feel free to checkout this <a href="https://github.com/mrtongkatali/laldiaz.me" target="_blank" rel="noreferrer"><strong>repository</strong></a>.</p>
+              </Typing>
+            )}
           </div>
         </div>
     </>
@@ -303,12 +309,13 @@ const Skills = (props) => {
 const App = () => {
   const [fadeInSkills, setFadeInSkills] = React.useState(false);
   const [fadeInExperience, setFadeInExperience] = React.useState(false);
+  const [fadeInPortfolio, setFadeInPortfolio] = React.useState(false);
 
   const _onScrollEvent = () => {
     const yAxis = window.scrollY;
     if (yAxis >= 170) setFadeInSkills(true);
     if (yAxis >= 450) setFadeInExperience(true);
-    console.log('header bottom reached', window.scrollY);
+    if (yAxis >= 1700) setFadeInPortfolio(true);
   };
 
   React.useEffect(() => {
@@ -331,7 +338,7 @@ const App = () => {
       </div>
 
       <div className="row no-gutters">
-        <Portfolio />
+        <Portfolio fadeInSection={fadeInPortfolio} />
       </div>
     </div>
   )
