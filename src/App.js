@@ -32,7 +32,7 @@ import {
 } from "@/components/icon"
 
 const _renderCover = () => {
-  const [cvUrl] = React.useState("https://dqmclbtur02qg.cloudfront.net/LeoDiaz-Resume-2021-v2-min.pdf");
+  const [cvUrl] = React.useState("https://dqmclbtur02qg.cloudfront.net/LeoDiaz-Resume-2021-v3-min.pdf");
   const [showContactInfo, setShowContactInfo] = React.useState(false);
 
   return (
