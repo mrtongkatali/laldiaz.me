@@ -94,7 +94,7 @@ const _renderCover = () => {
                   <FadeIn delay={600}>
                     <li className="ml-4">
                       <Typing speed={80}>
-                        <strong>hello at crazyapp dot cloud</strong>
+                        <strong>leo at crazyapp dot cloud</strong>
                       </Typing>
                     </li>
                   </FadeIn>
@@ -221,11 +221,13 @@ const Portfolio = (props) => {
           <div className="section-content">
             {fadeInSection && (
               <>
-                <Typing speed={7}>
+                <FadeIn delay={150}>
                   <p className="mb-3">Due to this three-letter-word <strong>"N.D.A"</strong>. Most of my commits are private. But if you're keen to know on how I code things, feel free to checkout this <a href="https://github.com/mrtongkatali/laldiaz.me" target="_blank" rel="noreferrer"><strong>repository</strong></a>.</p>
+                </FadeIn>
 
+                <FadeIn delay={350}>
                   <p>This site is powered by React, Bootstrap, Fontawesome and some imagination.</p>
-                </Typing>
+                </FadeIn>
               </>
             )}
           </div>
@@ -321,7 +323,7 @@ const App = () => {
     const yAxis = window.scrollY;
     if (yAxis >= 170) setFadeInSkills(true);
     if (yAxis >= 450) setFadeInExperience(true);
-    if (yAxis >= 1700) setFadeInPortfolio(true);
+    if (yAxis >= 1720) setFadeInPortfolio(true);
   };
 
   React.useEffect(() => {
