@@ -7,6 +7,7 @@ import MySqlLightIcon from "@/assets/images/skills-icon/mysql-light.png";
 import NginxLightIcon from "@/assets/images/skills-icon/nginx-light.png";
 import OpenAPILightIcon from "@/assets/images/skills-icon/openapi-light.png";
 import TypescriptLightIcon from "@/assets/images/skills-icon/typescript-light.png";
+import ReduxLightIcon from "@/assets/images/skills-icon/redux-light.png";
 
 export {
     ElasticLightIcon,
@@ -17,5 +18,6 @@ export {
     MySqlLightIcon,
     NginxLightIcon,
     OpenAPILightIcon,
-    TypescriptLightIcon
+    TypescriptLightIcon,
+    ReduxLightIcon
 };

@@ -27,7 +27,8 @@ import {
   MySqlLightIcon,
   NginxLightIcon,
   OpenAPILightIcon,
-  TypescriptLightIcon
+  TypescriptLightIcon,
+  ReduxLightIcon
 } from "@/components/icon"
 
 const _renderCover = () => {
@@ -46,7 +47,7 @@ const _renderCover = () => {
         <div className="col-md-7 section-content-wrapper hero">
           <div className="section-content">
             <Typing speed={7} onFinishedTyping={() => setShowContactInfo(true)}>
-              <p>Hi, I"m a Software Engineer based in Manila, PH.</p>
+              <p>Hi, I'm a Software Engineer based in Manila, PH.</p>
               <p>
                 I work mostly on major Javascript frameworks such as Vue and React.
                 <Typing.Backspace count={22} />
@@ -219,9 +220,13 @@ const Portfolio = (props) => {
         <div className="col-md-7 section-content-wrapper">
           <div className="section-content">
             {fadeInSection && (
-              <Typing speed={7}>
-                <p>Due to this three-letter-word <strong>"N.D.A"</strong>. Most of my commits are private. But if you're keen to know on how I code things, feel free to checkout this <a href="https://github.com/mrtongkatali/laldiaz.me" target="_blank" rel="noreferrer"><strong>repository</strong></a>.</p>
-              </Typing>
+              <>
+                <Typing speed={7}>
+                  <p className="mb-3">Due to this three-letter-word <strong>"N.D.A"</strong>. Most of my commits are private. But if you're keen to know on how I code things, feel free to checkout this <a href="https://github.com/mrtongkatali/laldiaz.me" target="_blank" rel="noreferrer"><strong>repository</strong></a>.</p>
+
+                  <p>This site is powered by React, Bootstrap, Fontawesome and some imagination.</p>
+                </Typing>
+              </>
             )}
           </div>
         </div>
@@ -297,6 +302,7 @@ const Skills = (props) => {
                   <ListItemComponent icon={faSass} name="SASS" isFa={true} delay={2400} />
                   <ListItemComponent icon={faBootstrap} name="Bootstrap" isFa={true} delay={2550} />
                   <ListItemComponent icon={TypescriptLightIcon} name="Typescript" isFa={false} delay={2700} />
+                  <ListItemComponent icon={ReduxLightIcon} name="Redux" isFa={false} delay={2950} />
                 </ul>
               </>
             )}
