@@ -46,7 +46,7 @@ const _renderCover = () => {
         </div>
         <div className="col-md-7 section-content-wrapper hero">
           <div className="section-content">
-            <Typing speed={7} onFinishedTyping={() => setShowContactInfo(true)}>
+            <Typing speed={12} onFinishedTyping={() => setShowContactInfo(true)}>
               <p>Hi, I'm a Software Engineer based in Manila, PH.</p>
               <p>
                 I work mostly on major Javascript frameworks such as Vue and React.
@@ -273,7 +273,7 @@ const Skills = (props) => {
           <div className="section-content">
             {fadeInSection && (
               <>
-                <Typing speed={7}>
+                <Typing speed={12}>
                   <p className="mb-3">{">"} Backend Development</p>
                 </Typing>
                 <ul className="expertise-list">
@@ -290,7 +290,7 @@ const Skills = (props) => {
                 </ul>
 
                 <p className="mb-3" />
-                <Typing speed={7}>
+                <Typing speed={12}>
                   <p className="mb-3">{">"} Frontend Development</p>
                 </Typing>
 
