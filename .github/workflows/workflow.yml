@@ -13,7 +13,13 @@ jobs:
         node-version: [15.x]
 
     steps:
-      - uses: actions/checkout@v1
+      - name: Checkout master repository
+        uses: actions/checkout@v1
+        with:
+          ref: dist
+          # need at least 2 here so we can get a proper log in next step
+          fetch-depth: 2
+
       - run: npm install
       - run: npm run build
 
@@ -32,6 +38,7 @@ jobs:
         uses: chetan/invalidate-cloudfront-action@master
         env:
           DISTRIBUTION: ${{ secrets.DISTRIBUTION }}
+          PATHS: '/'
           AWS_REGION: 'ap-southeast-1'
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
